@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		D24D98952F4933A40088D6C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D24D98772F492F630088D6C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D24D987E2F492F630088D6C5;
+			remoteInfo = "ABN-Places";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D24D987F2F492F630088D6C5 /* ABN-Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABN-Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D24D98912F4933A40088D6C5 /* ABN-PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ABN-PlacesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = "ABN-Places";
 			sourceTree = "<group>";
 		};
+		D24D98922F4933A40088D6C5 /* ABN-PlacesTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ABN-PlacesTests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D24D987C2F492F630088D6C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24D988E2F4933A40088D6C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				D24D98812F492F640088D6C5 /* ABN-Places */,
+				D24D98922F4933A40088D6C5 /* ABN-PlacesTests */,
 				D24D98802F492F630088D6C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				D24D987F2F492F630088D6C5 /* ABN-Places.app */,
+				D24D98912F4933A40088D6C5 /* ABN-PlacesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = D24D987F2F492F630088D6C5 /* ABN-Places.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D24D98902F4933A40088D6C5 /* ABN-PlacesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24D98972F4933A40088D6C5 /* Build configuration list for PBXNativeTarget "ABN-PlacesTests" */;
+			buildPhases = (
+				D24D988D2F4933A40088D6C5 /* Sources */,
+				D24D988E2F4933A40088D6C5 /* Frameworks */,
+				D24D988F2F4933A40088D6C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D24D98962F4933A40088D6C5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D24D98922F4933A40088D6C5 /* ABN-PlacesTests */,
+			);
+			name = "ABN-PlacesTests";
+			packageProductDependencies = (
+			);
+			productName = "ABN-PlacesTests";
+			productReference = D24D98912F4933A40088D6C5 /* ABN-PlacesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					D24D987E2F492F630088D6C5 = {
 						CreatedOnToolsVersion = 26.2;
+					};
+					D24D98902F4933A40088D6C5 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = D24D987E2F492F630088D6C5;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				D24D987E2F492F630088D6C5 /* ABN-Places */,
+				D24D98902F4933A40088D6C5 /* ABN-PlacesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D24D987D2F492F630088D6C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24D988F2F4933A40088D6C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D24D988D2F4933A40088D6C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D24D98962F4933A40088D6C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D24D987E2F492F630088D6C5 /* ABN-Places */;
+			targetProxy = D24D98952F4933A40088D6C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D24D98882F492F650088D6C5 /* Debug */ = {
@@ -306,6 +381,46 @@
 			};
 			name = Release;
 		};
+		D24D98982F4933A40088D6C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepitswift.ABN-PlacesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABN-Places.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABN-Places";
+			};
+			name = Debug;
+		};
+		D24D98992F4933A40088D6C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepitswift.ABN-PlacesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABN-Places.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABN-Places";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +438,15 @@
 			buildConfigurations = (
 				D24D988B2F492F650088D6C5 /* Debug */,
 				D24D988C2F492F650088D6C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24D98972F4933A40088D6C5 /* Build configuration list for PBXNativeTarget "ABN-PlacesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24D98982F4933A40088D6C5 /* Debug */,
+				D24D98992F4933A40088D6C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
