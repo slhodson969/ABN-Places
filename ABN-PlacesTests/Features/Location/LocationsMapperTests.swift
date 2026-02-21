@@ -63,8 +63,8 @@ struct LocationsMapperTests {
     
     // MARK: - Helpers
     
-    private func makeLocation(name: String?, lat: Double, long: Double) -> (model: Location, json: [String: Any]) {
-        let model = Location(name: name, latitude: lat, longitude: long)
+    private func makeLocation(name: String?, lat: Double, long: Double) -> (model: RemoteLocation, json: [String: Any]) {
+        let model = RemoteLocation(name: name, latitude: lat, longitude: long)
         let json: [String: Any] = [
             "name": name as Any,
             "lat": lat,

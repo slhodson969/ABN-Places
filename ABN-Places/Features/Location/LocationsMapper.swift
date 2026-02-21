@@ -10,19 +10,19 @@ import Foundation
 public final class LocationsMapper {
     
     private struct Root: Decodable {
-        let locations: [RemoteLocation]
+        let locations: [RemoteLocationDTO]
         
-        struct RemoteLocation: Decodable {
+        struct RemoteLocationDTO: Decodable {
             let name: String?
             let lat: Double
             let long: Double
             
-            var model: Location {
-                Location(name: name, latitude: lat, longitude: long)
+            var model: RemoteLocation {
+                RemoteLocation(name: name, latitude: lat, longitude: long)
             }
         }
         
-        var items: [Location] {
+        var items: [RemoteLocation] {
             locations.map { $0.model }
         }
     }
@@ -31,7 +31,7 @@ public final class LocationsMapper {
         case invalidData
     }
     
-    public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [Location] {
+    public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [RemoteLocation] {
         guard response.isOK, let root = try? JSONDecoder().decode(Root.self, from: data) else {
             throw Error.invalidData
         }
