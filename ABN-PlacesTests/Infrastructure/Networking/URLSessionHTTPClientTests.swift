@@ -147,33 +147,19 @@ struct URLSessionHTTPClientTests {
         return URLSessionHTTPClient(session: session)
     }
     
-    private func anyURL() -> URL {
-        URL(string: "https://example.com")!
-    }
-    
     // MARK: - Stubs
     
     private struct SuccessStub: Stub {
         static func stub(for request: URLRequest) throws -> (Data, URLResponse) {
             let data = "hello".data(using: .utf8)!
-            let response = HTTPURLResponse(
-                url: request.url!,
-                statusCode: 200,
-                httpVersion: nil,
-                headerFields: nil
-            )!
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200)
             return (data, response)
         }
     }
 
     private struct EmptyDataStub: Stub {
         static func stub(for request: URLRequest) throws -> (Data, URLResponse) {
-            let response = HTTPURLResponse(
-                url: request.url!,
-                statusCode: 200,
-                httpVersion: nil,
-                headerFields: nil
-            )!
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200)
             return (Data(), response)
         }
     }
@@ -202,12 +188,7 @@ struct URLSessionHTTPClientTests {
         static var capturedRequest: URLRequest?
         static func stub(for request: URLRequest) throws -> (Data, URLResponse) {
             capturedRequest = request
-            let response = HTTPURLResponse(
-                url: request.url!,
-                statusCode: 200,
-                httpVersion: nil,
-                headerFields: nil
-            )!
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200)
             return (Data(), response)
         }
     }
