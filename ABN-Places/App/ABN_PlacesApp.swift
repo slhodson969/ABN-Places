@@ -11,7 +11,17 @@ import SwiftUI
 struct ABN_PlacesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                viewModel: makeViewModel()
+            )
         }
+    }
+    
+    private func makeViewModel() -> LocationsViewModel {
+        let baseURL = URL(string: "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main")!
+        let url = LocationsEndpoint.getAll.url(baseURL: baseURL)
+        let client = URLSessionHTTPClient(session: .shared)
+        let loader = RemoteLocationsLoader(url: url, client: client)
+        return LocationsViewModel(loader: loader)
     }
 }
