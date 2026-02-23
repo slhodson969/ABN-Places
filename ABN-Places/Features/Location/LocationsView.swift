@@ -14,10 +14,6 @@ public struct LocationsView: View {
     @State private var latitudeInput: String = ""
     @State private var longitudeInput: String = ""
     
-    private var isInputValid: Bool {
-        Double(latitudeInput) != nil && Double(longitudeInput) != nil
-    }
-    
     public init(
         locations: [Location],
         didSelectCoordinates: @escaping (Double, Double) -> Void
@@ -79,8 +75,8 @@ public struct LocationsView: View {
                 }
                 
                 Button("Submit Coordinates") {
-                    guard let lat = Double(latitudeInput),
-                          let long = Double(longitudeInput)
+                    guard let lat = latitudeValue,
+                          let long = longitudeValue
                     else { return }
                     
                     didSelectCoordinates(lat, long)
@@ -99,6 +95,18 @@ public struct LocationsView: View {
             .listRowSeparator(.hidden)
         }
         .listStyle(.insetGrouped)
+    }
+    
+    private var latitudeValue: Double? {
+        Double(latitudeInput.replacingOccurrences(of: ",", with: "."))
+    }
+
+    private var longitudeValue: Double? {
+        Double(longitudeInput.replacingOccurrences(of: ",", with: "."))
+    }
+
+    private var isInputValid: Bool {
+        latitudeValue != nil && longitudeValue != nil
     }
 }
 
