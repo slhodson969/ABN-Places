@@ -58,7 +58,7 @@ public struct LocationsView: View {
                         .foregroundColor(.secondary)
                     
                     TextField("Enter latitude", text: $latitudeInput)
-                        .keyboardType(.decimalPad)
+                        .keyboardType(.numbersAndPunctuation)
                         .textFieldStyle(.roundedBorder)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
@@ -71,7 +71,7 @@ public struct LocationsView: View {
                         .foregroundColor(.secondary)
                     
                     TextField("Enter longitude", text: $longitudeInput)
-                        .keyboardType(.decimalPad)
+                        .keyboardType(.numbersAndPunctuation)
                         .textFieldStyle(.roundedBorder)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
