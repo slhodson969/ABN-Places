@@ -44,15 +44,20 @@ struct ContentView: View {
             } else {
                 LocationsView(
                     locations: viewModel.locations,
-                    didSelectCoordinates: { lat, long in
-                        print(lat, long)
-                    }
+                    didSelectCoordinates: openWikipediaForCoordinates
                 )
             }
         }
         .task {
             await viewModel.load()
         }
+    }
+    
+    private func openWikipediaForCoordinates(lat: Double, long: Double) {
+        #if canImport(UIKit)
+        guard let url = URL(string: "wikipedia://places?WMFLatitude=\(lat)&WMFLongitude=\(long)") else { return }
+        UIApplication.shared.open(url)
+        #endif
     }
 }
 
