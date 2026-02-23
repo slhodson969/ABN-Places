@@ -9,6 +9,7 @@ import Foundation
 import Testing
 @testable import ABN_Places
 
+@MainActor
 struct LocationsMapperTests {
     
     @Test
