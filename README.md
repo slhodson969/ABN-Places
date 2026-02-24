@@ -26,8 +26,14 @@ This architecture keeps networking, mapping, state management, and UI decoupled,
 
 ## Future Improvements
 
+- Add an app icon
+- Introduce a launch screen (splash screen) for improved first impression and startup experience
 - Fuller coordinate validation (e.g., bounding latitude [-90, 90] and longitude [-180, 180])
 - Allowing coordinates to be selected from a map view rather than manual entry
 - Caching retrieved locations locally for offline access
 - Storing user-entered coordinates for future use
 - UI enhancements for a more polished experience
+- Extract Wikipedia deep link creation into a dedicated component, with accompanying unit tests
+- Set up linting (e.g., SwiftLint) to enforce consistent code style
+- Introduce snapshot testing for UI regression coverage
+- Verify and refine the UI for larger Dynamic Type sizes to ensure full accessibility compliance
